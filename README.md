@@ -1,21 +1,23 @@
-# Portable N64 Controller Tester
+Fork of sanni's controller test ROM to add more functionality and simplify the interface.
+THIS WILL NOT WORK ON EMULATOR, ONLY ORIGINAL CONSOLE WITH A FLASH CART
 
-![cartreaderpcb](https://github.com/sanni/controllertest/blob/master/controllertest.jpg)
+Instructions:
+Press start to switch between the initial page and the benchmark page
+Hold your stick into each notch on the benchmark and press A to move to the next notch
+Press L and R to switch between benchmark comparisons
+Green means that angle is good, red means that angle is bad
 
-Based on the Gamecube controller to Nintendo 64 adapter by Andrew Brown and N64 to HID by Peter Den Hartog.  
+Changelog from original version:
+Removed unnecessary menus + text for testing the stick.
+Added diagonal values
+Changed text to red or green depending on if the angle is good or not
+Added extra comparisons such as a perfect hori, and an overlay for both perfect OEM sticks and perfect hori sticks
 
-Nokia 5110 LCD module pinout  
-LCD CLK -> Arduino Uno Pin 8  
-LCD DIN -> Arduino Uno Pin 9  
-LCD DC  -> Arduino Uno Pin 10  
-LCD RST -> Arduino Uno Pin 11  
-LCD CE  -> Arduino Uno Pin 12  
+Credits:
+THags15 - some additional code + ideas
+Xein64 - testing
+Dekudude64 - testing
+GTM - testing
+sanni - creating the original N64 port which this is based off
 
-N64 controller pinout  
-N64 VCC  -> Arduino Uno 3.3V  
-N64 Data -> Arduino Uno Pin 2  
-N64 GND  -> Arduino Uno GND  
-
-Between N64 Data and N64 VCC place a 1K Ohm pull-up resistor.  
-
-[![](https://dl.dropboxusercontent.com/s/h3hswzkiqzc7vjr/video2.jpg?dl=1)](https://www.youtube.com/watch?v=5PH3Je4rQf8)
+Compiled with libdragon: https://dragonminded.com/n64dev/libdragon/  
